@@ -15,7 +15,7 @@ import statsmodels.api as sm
 
 # --- Sekcja wyboru strony ---
 st.sidebar.title('Menu')
-selected_section = st.sidebar.selectbox('Poziom agregacji', ['Liczność firm', 'Mapy','Branże','Korelacje','Korelacje-technologia','Korelacje-informacje','Korelacje-turystyka','Korelacje-budownictwo','Korelacje-przemysł','Korelacje-handel','Regresja liniowa'])
+selected_section = st.sidebar.selectbox('Poziom agregacji', ['Liczność firm', 'Mapy','Branże','Korelacje-technologia','Korelacje-informacje','Korelacje-turystyka','Korelacje-budownictwo','Korelacje-przemysł','Korelacje-handel','Regresja liniowa'])
 
 ############################REGRESJA###################################################################################################
 def regresja_liniowa_section():
@@ -1180,8 +1180,10 @@ def handel_nak_sprzet_corr():
 def handel_nak_sprzet_inf_corr():
     st.markdown('### Korelacje - przedsiębiorstwa ponoszące nakłady na sprzęt informatyczny w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_inf.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1202,8 +1204,10 @@ def handel_nak_sprzet_inf_corr():
 def handel_nak_sprzet_tele_corr():
     st.markdown('### Korelacje - przedsiębiorstwa ponoszące nakłady na sprzęt telekomunikacyjny w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_tele.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1224,8 +1228,10 @@ def handel_nak_sprzet_tele_corr():
 def handel_nak_oprog_corr():
     st.markdown('### Korelacje - przedsiębiorstwa ponoszące nakłady na oprogramowanie w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_oprog.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1259,8 +1265,10 @@ def handel_corr_wartosc_nakladow_section():
 def handel_wnak_leasing_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych w przedsiębiorstwach na leasing urządzeń ICT w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_leasing.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1280,8 +1288,10 @@ def handel_wnak_leasing_corr():
     
 def handel_wnak_sprzet_opr_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych w przedsiębiorstwach na sprzęt i oprogramowanie w branżach związanych z handlem')
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx"  # Podaj nazwę pliku wejściowego
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_opr.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1302,8 +1312,10 @@ def handel_wnak_sprzet_opr_corr():
 def handel_wnak_sprzet_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych w przedsiębiorstwach na sprzęt w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_o.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1324,8 +1336,10 @@ def handel_wnak_sprzet_corr():
 def handel_wnak_sprzet_inf_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych w przedsiębiorstwach na sprzęt informatyczny w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_inf.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1346,8 +1360,10 @@ def handel_wnak_sprzet_inf_corr():
 def handel_wnak_sprzet_tele_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych w przedsiębiorstwach na sprzęt telekomunikacyjny w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_tele.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1368,8 +1384,10 @@ def handel_wnak_sprzet_tele_corr():
 def handel_wnak_oprog_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych w przedsiębiorstwach na oprogramowanie w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_oprog.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1404,8 +1422,10 @@ def handel_corr_pracownicy_section():
 def handel_przed_o_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_o.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1426,8 +1446,10 @@ def handel_przed_o_corr():
 def handel_przed_di_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_di.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1448,8 +1470,10 @@ def handel_przed_di_corr():
 def handel_pr_o_corr():
     st.markdown('### Korelacje - ilość pracujących ogółem w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_o.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1470,8 +1494,10 @@ def handel_pr_o_corr():
 def handel_pr_ww_corr():
     st.markdown('### Korelacje - ilość pracowników z wykształceniem wyższym w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_ww.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1492,8 +1518,10 @@ def handel_pr_ww_corr():
 def handel_pr_di_corr():
     st.markdown('### Korelacje - ilość pracowników z dostępem do internetu w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_di.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1514,8 +1542,10 @@ def handel_pr_di_corr():
 def handel_pr_up_corr():
     st.markdown('### Korelacje - ilość pracowników dysponujących urządzeniami przenośnymi w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_up.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1545,8 +1575,10 @@ def handel_corr_rodzaje_polaczen_section():
 def handel_rodz_pol_szer_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu poprzez łącze szerokopasmowe w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_o.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1567,8 +1599,10 @@ def handel_rodz_pol_szer_corr():
 def handel_rodz_pol_szerDSL_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu poprzez łącze szerokopasmowe z użyciem technologii DSL w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_DSL.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1598,8 +1632,10 @@ def handel_corr_predkosc_polaczen_section():
 def handel_pred_pol_szer_w_corr():
     st.markdown('### Korelacje - prędkość połączenia mniej niż 100 Mbit/s w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_w.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1620,8 +1656,10 @@ def handel_pred_pol_szer_w_corr():
 def handel_pred_pol_szer_s_corr():
     st.markdown('### Korelacje - prędkość połączenia przynajmniej 100 Mbit/s w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_s.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1672,8 +1710,10 @@ def przemysl_corr_naklady_section():
 def przemysl_nak_leasing_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw, które poniosły nakłady na leasing urządzeń ICT w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_leasing.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1696,8 +1736,10 @@ def przemysl_nak_leasing_corr():
 def przemysl_nak_sprzet_opr_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw, które poniosły nakłady na sprzęt i oprogramowanie w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_opr.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1720,8 +1762,10 @@ def przemysl_nak_sprzet_opr_corr():
 def przemysl_nak_sprzet_corr():
     st.markdown('### Korelacje - Korelacje - ilość przedsiębiorstw, które poniosły nakłady na sprzęt w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_o.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1744,8 +1788,10 @@ def przemysl_nak_sprzet_corr():
 def przemysl_nak_sprzet_inf_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw, które poniosły nakłady na sprzęt informatyczny w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_inf.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1768,8 +1814,10 @@ def przemysl_nak_sprzet_inf_corr():
 def przemysl_nak_sprzet_tele_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw, które poniosły nakłady na sprzęt telekomunikacyjny w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_tele.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1792,8 +1840,10 @@ def przemysl_nak_sprzet_tele_corr():
 def przemysl_nak_oprog_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw, które poniosły nakłady na oprogramowanie w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_oprog.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1829,8 +1879,10 @@ def przemysl_corr_wartosc_nakladow_section():
 def przemysl_wnak_leasing_corr():
     st.markdown('### Korelacje - wartość nakładów na leasing urządzeń ICT poniesiona przez przedsiębiorstwa w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_leasing.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1853,8 +1905,10 @@ def przemysl_wnak_leasing_corr():
 def przemysl_wnak_sprzet_opr_corr():
     st.markdown('### Korelacje - wartość nakładów na sprzęt i oprogramowanie poniesiona przez przedsiębiorstwa w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_opr.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1877,8 +1931,10 @@ def przemysl_wnak_sprzet_opr_corr():
 def przemysl_wnak_sprzet_corr():
     st.markdown('### Korelacje - wartość nakładów na sprzęt poniesiona przez przedsiębiorstwa w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_o.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1901,8 +1957,10 @@ def przemysl_wnak_sprzet_corr():
 def przemysl_wnak_sprzet_inf_corr():
     st.markdown('### Korelacje - wartość nakładów na sprzęt informatyczny poniesiona przez przedsiębiorstwa w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_inf.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1925,8 +1983,10 @@ def przemysl_wnak_sprzet_inf_corr():
 def przemysl_wnak_sprzet_tele_corr():
     st.markdown('### Korelacje - wartość nakładów na sprzęt telekomunikacyjny poniesiona przez przedsiębiorstwa w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_tele.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1949,8 +2009,10 @@ def przemysl_wnak_sprzet_tele_corr():
 def przemysl_wnak_oprog_corr():
     st.markdown('### Korelacje - wartość nakładów na oprogramowanie poniesiona przez przedsiębiorstwa w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx"  # Podaj nazwę pliku wejściowego
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_oprog.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -1970,7 +2032,6 @@ def przemysl_wnak_oprog_corr():
     plt.show()
     st.pyplot(fig)
     
-    
 def przemysl_corr_pracownicy_section():
     st.sidebar.header("Pracownicy")
     pages = {
@@ -1987,8 +2048,10 @@ def przemysl_corr_pracownicy_section():
 def przemysl_przed_o_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_o.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -2011,8 +2074,10 @@ def przemysl_przed_o_corr():
 def przemysl_przed_di_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_di.xlsx')
+
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -2035,8 +2100,10 @@ def przemysl_przed_di_corr():
 def przemysl_pr_o_corr():
     st.markdown('### Korelacje - ilość pracujących ogółem w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_o.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -2059,8 +2126,10 @@ def przemysl_pr_o_corr():
 def przemysl_pr_ww_corr():
     st.markdown('### Korelacje - ilość pracowników z wyższym wykształceniem w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_ww.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -2083,8 +2152,10 @@ def przemysl_pr_ww_corr():
 def przemysl_pr_di_corr():
     st.markdown('### Korelacje - ilość pracowników z dostępem do internetu w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_di.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -2107,8 +2178,10 @@ def przemysl_pr_di_corr():
 def przemysl_pr_up_corr():
     st.markdown('### Korelacje - ilość pracowników dysponujących urządzeniami przenośnymi w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_up.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -2142,6 +2215,8 @@ def przemysl_rodz_pol_szer_corr():
     
     plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx" 
     df = pd.read_excel(plik_wejsciowy)
+
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -4250,386 +4325,6 @@ def tpred_pol_szer_s_corr():
     plt.title("Macierz korelacji")
     plt.show()
     st.pyplot(fig)
-################################################KORELACJE- WIELKOŚĆ######################################################################
-# def korelacje_section():
-#     selected_subsection = st.sidebar.selectbox("Wybierz kategorię", [
-#         "Nakłady", "Pracownicy", "Wartość Nakładów", "Rodzaje Połączeń", "Prędkość Połączeń"
-#     ])
-#     if selected_subsection == "Nakłady":
-#         corr_naklady_section()
-#     elif selected_subsection == "Pracownicy":
-#         corr_pracownicy_section()
-#     elif selected_subsection == "Wartość Nakładów":
-#         corr_wartosc_nakladow_section()
-#     elif selected_subsection == "Rodzaje Połączeń":
-#         corr_rodzaje_polaczen_section()
-#     elif selected_subsection == "Prędkość Połączeń":
-#         corr_predkosc_polaczen_section()        
-        
-# def corr_pracownicy_section():
-#     st.sidebar.header("Pracownicy")
-#     pages = {
-#         "Przedsiębiorstwa zatrudniające pracowników": przed_o_corr,
-#         "Przedsiębiorstwa z dostępem do internetu": przed_di_corr,
-#         "Pracujący ogółem": pr_o_corr,
-#         "Pracownicy z wyższym wykształceniem": pr_ww_corr,
-#         "Pracownicy z dostępem do internetu": pr_di_corr,
-#         "Pracownicy z urządzeniami przenośnymi": pr_up_corr,
-#     }
-#     selected_page = st.sidebar.selectbox("Wybierz analizę", pages.keys())
-#     pages[selected_page]()
-
-# def pr_di_corr():
-#     st.markdown('### Korelacje - ilość pracowników z dostępem do internetu')
-    
-#     df = pd.read_excel('data_wide_pr_di.xlsx')
-#     df_transformed = df.set_index("Identyfikator").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-
-# def przed_di_corr():
-#     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu')
-    
-#     df = pd.read_excel('data_wide_przed_di.xlsx')
-#     df_transformed = df.set_index("Identyfikator").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-
-# def przed_o_corr():
-#     st.markdown('### Korelacje - ilość przedsiębiorstw')
-    
-#     df = pd.read_excel('data_wide_przed_o.xlsx')
-#     df_transformed = df.set_index("Identyfikator").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def pr_ww_corr():
-#     st.markdown('### Korelacje - ilość pracowników z wykształceniem wyższym')
-    
-#     df = pd.read_excel('data_wide_pr_ww.xlsx')
-#     df_transformed = df.set_index("Identyfikator").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def pr_up_corr():
-#     st.markdown('### Korelacje - ilość pracowników dysponujących urządzeniami przenośnymi')
-    
-#     df = pd.read_excel('data_wide_pr_up.xlsx')
-#     df_transformed = df.set_index("Identyfikator").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def pr_o_corr():
-#     st.markdown('### Korelacje - ilość pracujących ogółem')
-    
-#     df = pd.read_excel('data_wide_pr_o.xlsx')
-#     df_transformed = df.set_index("Identyfikator").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-
-# def corr_naklady_section():
-#     st.sidebar.header("Nakłady")
-#     pages = {
-#         "Nakłady na sprzęt/oprogramowanie": nak_sprzet_opr_corr,
-#         "Nakłady - sprzęt ogółem": nak_sprzet_corr,
-#         "Nakłady - sprzęt informatyczny": nak_sprzet_inf_corr,
-#         "Nakłady - sprzęt telekomunikacyjny": nak_sprzet_tele_corr,
-#         "Nakłady - leasing": nak_leasing_corr,
-#         "Nakłady - oprogramowanie": nak_oprog_corr,
-#     }
-#     selected_page = st.sidebar.selectbox("Wybierz analizę", pages.keys())
-#     pages[selected_page]()
-    
-# def nak_sprzet_opr_corr():
-#     st.markdown('### Korelacje - ilość przedsiębiorstw ponoszących nakłady na sprzęt i oprogramowanie')
-    
-#     df = pd.read_excel('data_wide_N_sprzet_opr.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def nak_sprzet_corr():
-#     st.markdown('### Korelacje - ilość przedsiębiorstw ponoszących nakłady na sprzęt ogółem')
-    
-#     df = pd.read_excel('data_wide_N_sprzet_o.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-
-# def nak_sprzet_inf_corr():
-#     st.markdown('### Korelacje - ilość przedsiębiorstw ponoszących nakłady na sprzęt informatyczny')
-    
-#     df = pd.read_excel('data_wide_N_sprzet_inf.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)    
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def nak_sprzet_tele_corr():
-#     st.markdown('### Korelacje - ilość przedsiębiorstw ponoszących nakłady na sprzęt telekomunikacyjny')
-    
-#     df = pd.read_excel('data_wide_N_sprzet_tele.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def nak_leasing_corr():
-#     st.markdown('### Korelacje - ilość przedsiębiorstw ponoszących nakłady na leasing urządzeń ICT')
-    
-#     df = pd.read_excel('data_wide_N_leasing.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def nak_oprog_corr():
-#     st.markdown('### Korelacje - ilość przedsiębiorstw ponoszących nakłady na oprogramowanie')
-    
-#     df = pd.read_excel('data_wide_N_oprog.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def corr_wartosc_nakladow_section():
-#     st.sidebar.header("Wartość Nakładów")
-#     pages = {
-#         "Wartość nakładów - sprzęt/oprogramowanie": wnak_sprzet_opr_corr,
-#         "Wartość nakładów - sprzęt": wnak_sprzet_corr,
-#         "Wartość nakładów - sprzęt informatyczny": wnak_sprzet_inf_corr,
-#         "Wartość nakładów - sprzęt teleinformatyczny": wnak_sprzet_tele_corr,
-#         "Wartość nakładów - leasing": wnak_leasing_corr,
-#         "Wartość nakładów - oprogramowanie": wnak_oprog_corr,
-#     }
-#     selected_page = st.sidebar.selectbox("Wybierz analizę", pages.keys())
-#     pages[selected_page]()
-
-# def wnak_sprzet_opr_corr():
-#     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt i oprogramowanie')
-    
-#     df = pd.read_excel('data_wide_WN_sprzet_opr.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def wnak_sprzet_corr():
-#     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt ogółem')
-    
-#     df = pd.read_excel('data_wide_WN_sprzet_o.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-
-# def wnak_sprzet_inf_corr():
-#     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt informatyczny')
-    
-#     df = pd.read_excel('data_wide_WN_sprzet_inf.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def wnak_sprzet_tele_corr():
-#     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt telekomunikacyjny')
-    
-#     df = pd.read_excel('data_wide_WN_sprzet_tele.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def wnak_leasing_corr():
-#     st.markdown('### Korelacje - wartość nakładów poniesionych na leasing urządzeń ICT')
-    
-#     df = pd.read_excel('data_wide_WN_leasing.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)
-    
-# def wnak_oprog_corr():
-#     st.markdown('### Korelacje - wartość nakładów poniesionych na oprogramowanie')
-    
-#     df = pd.read_excel('data_wide_WN_oprog.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)    
-
-# def corr_rodzaje_polaczen_section():
-#     st.sidebar.header("Rodzaje Połączeń")
-#     pages = {
-#         "szerokopasmowy  dostęp do Internetu": rodz_pol_szer_corr,
-#         "szerokopasmowy  dostęp do Internetu poprzez łącze DSL": rodz_pol_szerDSL_corr,
-#     }
-#     selected_page = st.sidebar.selectbox("Wybierz analizę", pages.keys())
-#     pages[selected_page]()
-    
-# def rodz_pol_szer_corr():
-#     st.markdown('### Korelacje - odsetek przedsiębiorstw z łączem szeropasmowym wśród przedsiębiorstw ogółem')
-    
-#     df = pd.read_excel('data_wide_RP_od_szer_o.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig) 
-
-# def rodz_pol_szerDSL_corr():
-#     st.markdown('### Korelacje - odsetek przedsiębiorstw wykorzystujących technologię DSL wśród przedsiębiorstw z połączeniem szerokopasmowym')
-    
-#     df = pd.read_excel('data_wide_RP_od_szer_DSL.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig)     
-    
-# def corr_predkosc_polaczen_section():
-#     st.sidebar.header("Prędkość Połączeń")
-#     pages = {
-#         "szerokopasmowy  dostęp do Internetu - prędkość połączenia mniej niż 100 Mbit/s": pred_pol_szer_w_corr,
-#         "szerokopasmowy  dostęp do Internetu - prędkość połączenia przynajmniej 100 Mbit/s": pred_pol_szer_s_corr
-#     }
-#     selected_page = st.sidebar.selectbox("Wybierz analizę", pages.keys())
-#     pages[selected_page]()
-    
-# def pred_pol_szer_w_corr():
-#     st.markdown('### Korelacje - odsetek przedsiębiorstw z połaczeniem o prędkości mniejszej niż 100 Mbit/s wśród przedsiębiorstw z połączeniem szerokopasmowym')
-    
-#     df = pd.read_excel('data_wide_PP_od_szer_w.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig) 
-
-# def pred_pol_szer_s_corr():
-#     st.markdown('### Korelacje - odsetek przedsiębiorstw z połaczeniem o prędkości przynajmniej 100 Mbit/s wśród przedsiębiorstw z połączeniem szerokopasmowym')
-    
-#     df = pd.read_excel('data_wide_PP_od_szer_s.xlsx')
-#     df_transformed = df.set_index("wyszczegolnienie").T
-#     df_transformed.columns = ["Małe", "Średnie", "Duże"]
-#     df_transformed.index = [2015, 2016, 2017, 2018, 2019, 2020, 2021,2022]
-#     correlation_matrix = df_transformed.corr()
-#     fig, ax = plt.subplots(figsize=(10, 8))
-#     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f", linewidths=0.5)
-#     plt.title("Heatmapa macierzy korelacji")
-#     plt.show()
-#     st.pyplot(fig) 
     
 ##### MAPY ##############################################################################################################################
 def mapy_section():
@@ -9475,8 +9170,6 @@ elif selected_section == 'Mapy':
     mapy_section()
 elif selected_section == 'Branże':
     data_dzialy()
-# elif selected_section == 'Korelacje':
-#     korelacje_section()
 elif selected_section == 'Korelacje-technologia':
     korelacje_tech_section()
 elif selected_section == 'Korelacje-informacje':
