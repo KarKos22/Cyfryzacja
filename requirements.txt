@@ -6,7 +6,7 @@ altair
 scipy
 pymannkendall
 numpy
-matplotlib.pyplot
+matplotlib
 seaborn
 statsmodels.api
 os
