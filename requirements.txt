@@ -1,6 +1,6 @@
 streamlit
 pandas
-geopandas
+geopandas==0.12.2
 plotly.express
 altair
 urllib.error
