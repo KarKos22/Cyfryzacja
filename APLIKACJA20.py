@@ -45,101 +45,6 @@ def r_naklady_section():
     }
     selected_page = st.sidebar.selectbox("Wybierz analizę", pages.keys())
     pages[selected_page]()
-
-# def r_nak_sprzettt():
-#     file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-#     df = pd.read_excel('działy.xlsx')
-    
-#     # Zmienna zależna
-#     y = df["sprzet_o22"]
-    
-#     # Zmienne niezależne: wcześniejsze lata tej samej zmiennej (2015–2021)
-#     X = df[["sprzet_o15", "sprzet_o16", "sprzet_o17", "sprzet_o18", "sprzet_o19", "sprzet_o20", "sprzet_o21"]]
-#     X = sm.add_constant(X)  # dodaj stałą (intercept)
-    
-#     # Dopasowanie modelu
-#     model = sm.OLS(y, X).fit()
-
-#     # Pobranie współczynników
-#     intercept = model.params["const"]
-#     coefficients = model.params.drop("const")
-    
-#     # Utworzenie równania regresji
-#     equation = f"y = {intercept:.2f}"
-#     for var, coef in coefficients.items():
-#         equation += f" + ({coef:.2f} * {var})"
-    
-#     # Wyświetlenie równania w Streamlit
-#     st.subheader("Równanie regresji liniowej:")
-#     st.text(equation)
-    
-#     # Przewidywane wartości
-#     y_pred = model.predict(X)
-    
-#     # Wykres punktowy
-#     fig, ax = plt.subplots(figsize=(8, 6))
-#     ax.scatter(y, y_pred, color='royalblue', alpha=0.7)
-#     ax.plot([y.min(), y.max()], [y.min(), y.max()], color='red', linestyle='--')  # linia idealna
-#     ax.set_xlabel("Wartości rzeczywiste (y)")
-#     ax.set_ylabel("Wartości przewidywane (ŷ)")
-#     ax.set_title("Rzeczywiste vs Przewidywane wartości")
-#     ax.grid(True)
-#     st.pyplot(fig)
-#     # Podsumowanie modelu
-#     st.subheader("Podsumowanie modelu regresji:")
-#     st.code(model.summary().as_text())
-    
-# def r_nak_sprzett():
-#     file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-#     df = pd.read_excel(file_path)
-
-#     # -----------------------------
-#     # MODEL 1 – WIELE LAT (2015–2021)
-#     # -----------------------------
-#     y = df["sprzet_o22"]
-#     X_multi = df[["sprzet_o15", "sprzet_o16", "sprzet_o17", "sprzet_o18", "sprzet_o19", "sprzet_o20", "sprzet_o21"]]
-#     X_multi = sm.add_constant(X_multi)
-#     model_multi = sm.OLS(y, X_multi).fit()
-
-#     intercept_multi = model_multi.params["const"]
-#     coefficients_multi = model_multi.params.drop("const")
-#     equation_multi = f"y = {intercept_multi:.2f}"
-#     for var, coef in coefficients_multi.items():
-#         equation_multi += f" + ({coef:.2f} * {var})"
-
-#     st.subheader("Model 1 – Regresja wieloraka (2015–2021):")
-#     st.text(equation_multi)
-#     st.code(model_multi.summary().as_text())
-
-#     # -----------------------------
-#     # MODEL 2 – REGRESJA PROSTA (2021)
-#     # -----------------------------
-#     X_single = df[["sprzet_o21"]]
-#     X_single = sm.add_constant(X_single)
-#     model_single = sm.OLS(y, X_single).fit()
-
-#     intercept_single = model_single.params["const"]
-#     coefficients_single = model_single.params.drop("const")
-#     equation_single = f"y = {intercept_single:.2f}"
-#     for var, coef in coefficients_single.items():
-#         equation_single += f" + ({coef:.2f} * {var})"
-
-#     st.subheader("Model 2 – Regresja liniowa (2021):")
-#     st.text(equation_single)
-#     st.code(model_single.summary().as_text())
-
-#     # -----------------------------
-#     # WYKRES: Rzeczywiste vs Przewidywane (dla modelu wielorakiego)
-#     # -----------------------------
-#     y_pred = model_multi.predict(X_multi)
-#     fig, ax = plt.subplots(figsize=(8, 6))
-#     ax.scatter(y, y_pred, color='royalblue', alpha=0.7)
-#     ax.plot([y.min(), y.max()], [y.min(), y.max()], color='red', linestyle='--')
-#     ax.set_xlabel("Wartości rzeczywiste (y)")
-#     ax.set_ylabel("Wartości przewidywane (ŷ)")
-#     ax.set_title("Rzeczywiste vs Przewidywane wartości (Model wieloraki)")
-#     ax.grid(True)
-#     st.pyplot(fig)
     
 def r_nak_sprzet():
 #     file_path = "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
@@ -203,9 +108,9 @@ def r_nak_sprzet():
     st.pyplot(fig)
     
 def r_nak_sprzet_opr():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
-    
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     # Zmienna zależna
     y = df["sprzet_opr22"]
     
@@ -246,9 +151,9 @@ def r_nak_sprzet_opr():
     st.code(model.summary().as_text())
     
 def r_nak_sprzet_inf():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
-    
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     # Zmienna zależna
     y = df["sprzet_inf22"]
     
@@ -289,8 +194,9 @@ def r_nak_sprzet_inf():
     st.code(model.summary().as_text())  
     
 def r_nak_sprzet_tele():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["sprzet_tele22"]
@@ -332,8 +238,9 @@ def r_nak_sprzet_tele():
     st.code(model.summary().as_text())   
     
 def r_nak_leasing():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["leasing22"]
@@ -373,9 +280,11 @@ def r_nak_leasing():
     # Podsumowanie modelu
     st.subheader("Podsumowanie modelu regresji:")
     st.code(model.summary().as_text())    
+    
 def r_nak_oprog():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["oprog22"]
@@ -414,7 +323,8 @@ def r_nak_oprog():
     st.pyplot(fig)
     # Podsumowanie modelu
     st.subheader("Podsumowanie modelu regresji:")
-    st.code(model.summary().as_text())    
+    st.code(model.summary().as_text())   
+    
 def r_pracownicy_section():
     st.sidebar.header("Pracownicy")
     pages = {
@@ -429,8 +339,9 @@ def r_pracownicy_section():
     pages[selected_page]()    
     
 def r_przed_o():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["przed_o21"]
@@ -470,11 +381,11 @@ def r_przed_o():
     # Podsumowanie modelu
     st.subheader("Podsumowanie modelu regresji:")
     st.code(model.summary().as_text()) 
-  
 
 def r_przed_di():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["przed_di21"]
@@ -516,8 +427,9 @@ def r_przed_di():
     st.code(model.summary().as_text())
     
 def r_pr_o():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["pr_o21"]
@@ -559,8 +471,9 @@ def r_pr_o():
     st.code(model.summary().as_text())
     
 def r_pr_ww():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["pr_ww21"]
@@ -602,8 +515,9 @@ def r_pr_ww():
     st.code(model.summary().as_text())
     
 def r_pr_up():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["pr_up21"]
@@ -645,8 +559,9 @@ def r_pr_up():
     st.code(model.summary().as_text())
     
 def r_pr_di():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["pr_di21"]
@@ -702,8 +617,9 @@ def r_wartosc_nakladow_section():
     
     
 def r_wnak_sprzet():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["wsprzet_o22"]
@@ -745,8 +661,9 @@ def r_wnak_sprzet():
     st.code(model.summary().as_text())
     
 def r_wnak_sprzet_opr():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["wsprzet_opr22"]
@@ -788,8 +705,9 @@ def r_wnak_sprzet_opr():
     st.code(model.summary().as_text())
     
 def r_wnak_sprzet_inf():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["wsprzet_inf22"]
@@ -831,8 +749,9 @@ def r_wnak_sprzet_inf():
     st.code(model.summary().as_text())
     
 def r_wnak_sprzet_tele():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["wsprzet_tele22"]
@@ -874,8 +793,9 @@ def r_wnak_sprzet_tele():
     st.code(model.summary().as_text())
     
 def r_wnak_leasing():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["wleasing22"]
@@ -917,8 +837,9 @@ def r_wnak_leasing():
     st.code(model.summary().as_text())
     
 def r_wnak_oprog():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["woprog22"]
@@ -971,8 +892,9 @@ def r_rodzaje_polaczen_section():
     pages[selected_page]()  
     
 def r_rodz_pol_szer():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["od_szer_o22"]
@@ -1014,8 +936,9 @@ def r_rodz_pol_szer():
     st.code(model.summary().as_text())
     
 def r_rodz_pol_szerDSL():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["od_szer_DSL22"]
@@ -1066,8 +989,9 @@ def r_predkosc_polaczen_section():
     pages[selected_page]()
     
 def r_pred_pol_szer_w():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["od_szer_w22"]
@@ -1109,8 +1033,9 @@ def r_pred_pol_szer_w():
     st.code(model.summary().as_text())
     
 def r_pred_pol_szer_s():
-    file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
-    df = pd.read_excel(file_path)
+    # file_path =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/działy.xlsx"
+    # df = pd.read_excel(file_path)
+    df = pd.read_excel('działy.xlsx')
     
     # Zmienna zależna
     y = df["od_szer_s22"]
@@ -1183,8 +1108,10 @@ def handel_corr_naklady_section():
 def handel_nak_leasing_corr():
     st.markdown('### Korelacje - przedsiębiorstwa ponoszące nakłady na leasing urządzeń ICT w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_leasing.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1205,8 +1132,10 @@ def handel_nak_leasing_corr():
 def handel_nak_sprzet_opr_corr():
     st.markdown('### Korelacje - przedsiębiorstwa ponoszące nakłady na sprzęt i oprogramowanie w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_opr.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
@@ -1227,8 +1156,10 @@ def handel_nak_sprzet_opr_corr():
 def handel_nak_sprzet_corr():
     st.markdown('### Korelacje - przedsiębiorstwa ponoszące nakłady na sprzęt w branżach związanych z handlem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_o.xlsx')
+    
     handel=df[df["wyszczegolnienie"].isin([
     'Handel i naprawy',
     'Handel i naprawa pojazdów',
