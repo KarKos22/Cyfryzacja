@@ -9,3 +9,4 @@ numpy
 matplotlib.pyplot
 seaborn
 statsmodels.api
+os
