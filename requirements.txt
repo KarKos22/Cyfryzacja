@@ -3,7 +3,7 @@ pandas
 geopandas==0.12.2
 plotly.express
 altair
-scipy.stats
+scipy
 pymannkendall
 numpy
 os
