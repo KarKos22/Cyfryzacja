@@ -1,0 +1,13 @@
+streamlit
+pandas
+geopandas
+plotly.express
+altair
+urllib.error
+scipy.stats
+pymannkendall
+numpy
+os
+matplotlib.pyplot
+seaborn
+statsmodels.api
