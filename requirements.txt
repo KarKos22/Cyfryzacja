@@ -1,12 +1,11 @@
 streamlit
 pandas
 geopandas==0.12.2
-plotly.express
+plotly
 altair
 scipy
 pymannkendall
 numpy
 matplotlib
 seaborn
-statsmodels.api
-os
+statsmodels
