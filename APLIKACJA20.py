@@ -2213,9 +2213,9 @@ def przemysl_corr_rodzaje_polaczen_section():
 def przemysl_rodz_pol_szer_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu poprzez łącze szerokopasmowe w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
-
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_o.xlsx')
     
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
@@ -2239,8 +2239,10 @@ def przemysl_rodz_pol_szer_corr():
 def przemysl_rodz_pol_szerDSL_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu poprzez łącze szerokopasmowe wykorzystywane z użyciem technologii DSL w branżach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_DSL.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -2272,8 +2274,10 @@ def przemysl_corr_predkosc_polaczen_section():
 def przemysl_pred_pol_szer_w_corr():
     st.markdown('### Korelacje - prędkość połączenia mniej niż 100 Mbit/s w przedsiębiorstwach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_w.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -2296,8 +2300,10 @@ def przemysl_pred_pol_szer_w_corr():
 def przemysl_pred_pol_szer_s_corr():
     st.markdown('### Korelacje - prędkość połączenia przynajmniej 100 Mbit/s w przedsiębiorstwach związanych z przemysłem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_s.xlsx')
+    
     przemysl=df[df["wyszczegolnienie"].isin([
     'Przetwórstwo przemysłowe',
     'Przemysł spożywczy',
@@ -2349,8 +2355,10 @@ def budcorr_naklady_section():
 def budnak_leasing_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na leasing urządzeń ICT w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_leasing.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2376,8 +2384,10 @@ def budnak_leasing_corr():
 def budnak_sprzet_opr_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt i oprogramowanie w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_opr.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2403,8 +2413,11 @@ def budnak_sprzet_opr_corr():
 def budnak_sprzet_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    
+    df = pd.read_excel('datadzialy_wide_N_sprzet_o.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2430,8 +2443,10 @@ def budnak_sprzet_corr():
 def budnak_sprzet_inf_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt informatyczny w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_inf.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2457,8 +2472,10 @@ def budnak_sprzet_inf_corr():
 def budnak_sprzet_tele_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt telekomunikacyjny w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_tele.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2484,8 +2501,10 @@ def budnak_sprzet_tele_corr():
 def budnak_oprog_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na oprogramowanie w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_oprog.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2524,8 +2543,9 @@ def budcorr_wartosc_nakladow_section():
 def budwnak_leasing_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na leasing urządzeń ICT w przedsiębiorstwach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_leasing.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2551,8 +2571,9 @@ def budwnak_leasing_corr():
 def budwnak_sprzet_opr_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt i oprogramowanie w przedsiębiorstwach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_opr.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2578,8 +2599,10 @@ def budwnak_sprzet_opr_corr():
 def budwnak_sprzet_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt w przedsiębiorstwach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_o.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2605,8 +2628,9 @@ def budwnak_sprzet_corr():
 def budwnak_sprzet_inf_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt informatyczny w przedsiębiorstwach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_inf.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2632,8 +2656,9 @@ def budwnak_sprzet_inf_corr():
 def budwnak_sprzet_tele_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt telekomunikacyjny w przedsiębiorstwach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_tele.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2659,8 +2684,9 @@ def budwnak_sprzet_tele_corr():
 def budwnak_oprog_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na oprogramowanie w przedsiębiorstwach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_oprog.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2699,8 +2725,9 @@ def budcorr_pracownicy_section():
 def budprzed_o_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_o.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2726,8 +2753,9 @@ def budprzed_o_corr():
 def budprzed_di_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_di.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2753,8 +2781,9 @@ def budprzed_di_corr():
 def budpr_o_corr():
     st.markdown('### Korelacje - ilość pracujących ogółem w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_o.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2780,8 +2809,9 @@ def budpr_o_corr():
 def budpr_ww_corr():
     st.markdown('### Korelacje - ilość pracowników z wyższym wykształceniem w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_ww.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2807,8 +2837,10 @@ def budpr_ww_corr():
 def budpr_di_corr():
     st.markdown('### Korelacje - ilość pracowników z dostępem do internetu w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_di.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2834,8 +2866,10 @@ def budpr_di_corr():
 def budpr_up_corr():
     st.markdown('### Korelacje - ilość pracowników dysponujących urządzeniami przenośnymi w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_up.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2870,8 +2904,10 @@ def budcorr_rodzaje_polaczen_section():
 def budrodz_pol_szer_corr():
     st.markdown('### Korelacje - przedsiębiorstwa z dostępem do internetu poprzez łącze szerokopasmowe w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_o.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2897,8 +2933,9 @@ def budrodz_pol_szer_corr():
 def budrodz_pol_szerDSL_corr():
     st.markdown('### Korelacje - przedsiębiorstwa z dostępem do internetu poprzez łącze szerokopasmowe wykorzystywane z użyciem technologii DSL w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_DSL.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2933,8 +2970,9 @@ def budcorr_predkosc_polaczen_section():
 def budpred_pol_szer_w_corr():
     st.markdown('### Korelacje - prędkość połączenia mniej niż 100 Mbit/s w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_w.xlsx')
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -2960,8 +2998,10 @@ def budpred_pol_szer_w_corr():
 def budpred_pol_szer_s_corr():
     st.markdown('### Korelacje - prędkość połączenia przynajmniej 100 Mbit/s w branżach związanych z budownictwem')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_s.xlsx')
+    
     budownictwo=df[df["wyszczegolnienie"].isin(['Wyroby drewniane, papiernictwo i poligrafia',
 'Przemysł chemiczny i farmaceutyczny, ceramika i przetwarzanie materiałów niemetalicznych',
 'Produkcja metali i metalowych wyrobów gotowych',
@@ -3016,8 +3056,10 @@ def turcorr_naklady_section():
 def turnak_leasing_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na leasing urządzeń ICT w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_leasing.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3033,8 +3075,10 @@ def turnak_leasing_corr():
 def turnak_sprzet_opr_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt i oprogramowanie w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_opr.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3050,8 +3094,9 @@ def turnak_sprzet_opr_corr():
 def turnak_sprzet_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_o.xlsx')
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3067,8 +3112,10 @@ def turnak_sprzet_corr():
 def turnak_sprzet_inf_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt informatyczny w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx"
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx"
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_inf.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3084,8 +3131,9 @@ def turnak_sprzet_inf_corr():
 def turnak_sprzet_tele_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt telekomunikacyjny w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_tele.xlsx')
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3101,8 +3149,10 @@ def turnak_sprzet_tele_corr():
 def turnak_oprog_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na oprogramowanie w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_oprog.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3131,8 +3181,10 @@ def turcorr_wartosc_nakladow_section():
 def turwnak_leasing_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na leasing urządzeń ICT w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_leasing.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3148,8 +3200,10 @@ def turwnak_leasing_corr():
 def turwnak_sprzet_opr_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt i oprogramowanie w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_opr.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3165,8 +3219,9 @@ def turwnak_sprzet_opr_corr():
 def turwnak_sprzet_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_o.xlsx')
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3182,8 +3237,10 @@ def turwnak_sprzet_corr():
 def turwnak_sprzet_inf_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt informatyczny w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_inf.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3199,8 +3256,10 @@ def turwnak_sprzet_inf_corr():
 def turwnak_sprzet_tele_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt telekomunikacyjny w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_tele.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3216,8 +3275,9 @@ def turwnak_sprzet_tele_corr():
 def turwnak_oprog_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na oprogramowanie w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_oprog.xlsx')
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3246,8 +3306,10 @@ def turcorr_pracownicy_section():
 def turprzed_o_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_o.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3263,8 +3325,9 @@ def turprzed_o_corr():
 def turprzed_di_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_di.xlsx')
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3280,8 +3343,10 @@ def turprzed_di_corr():
 def turpr_o_corr():
     st.markdown('### Korelacje - ilość pracujących ogółem w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_o.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3297,8 +3362,10 @@ def turpr_o_corr():
 def turpr_ww_corr():
     st.markdown('### Korelacje - ilość pracowników z wykształceniem wyższym w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_ww.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3314,8 +3381,10 @@ def turpr_ww_corr():
 def turpr_di_corr():
     st.markdown('### Korelacje - ilość pracowników z dostępem do internetu w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_di.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3331,8 +3400,9 @@ def turpr_di_corr():
 def turpr_up_corr():
     st.markdown('### Korelacje - ilość pracowników dysponująca urządzeniami przenośnymi w branżach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_up.xlsx')
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3357,8 +3427,9 @@ def turcorr_rodzaje_polaczen_section():
 def turrodz_pol_szer_corr():
     st.markdown('### Korelacje - przedsiębiorstwa z dostępem do internetu poprzez łącze szerokopasmowe w przedsiębiorstwach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_o.xlsx')
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3374,8 +3445,9 @@ def turrodz_pol_szer_corr():
 def turrodz_pol_szerDSL_corr():
     st.markdown('### Korelacje - przedsiębiorstwa z dostępem do internetu poprzez łącze szerokopasmowe wykorzystywane z użyciem technologii DSL w przedsiębiorstwach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_DSL.xlsx')
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3400,8 +3472,10 @@ def turcorr_predkosc_polaczen_section():
 def turpred_pol_szer_w_corr():
     st.markdown('### Korelacje - prędkość połączenia mniej niż 100 Mbit/s w przedsiębiorstwach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_w.xlsx')
+    
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3417,8 +3491,9 @@ def turpred_pol_szer_w_corr():
 def turpred_pol_szer_s_corr():
     st.markdown('### Korelacje - prędkość połączenia przynajmniej 100 Mbit/s w przedsiębiorstwach związanych z turystyką')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_s.xlsx')
     turystyka=df[df["wyszczegolnienie"].isin(['Zakwaterowanie','Wyżywienie','Turystyka'])]
     vector_turystyka = turystyka["wyszczegolnienie"].tolist()
     df_transformed_tur = turystyka.set_index("wyszczegolnienie").T
@@ -3463,8 +3538,10 @@ def icorr_naklady_section():
 def inak_leasing_corr(): 
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na leasing urządzeń ICT w branżach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_leasing.xlsx')
+    
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3480,8 +3557,9 @@ def inak_leasing_corr():
 def inak_sprzet_opr_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt i oprogramowanie w branżach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_opr.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3497,8 +3575,9 @@ def inak_sprzet_opr_corr():
 def inak_sprzet_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt ogółem w branżach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_o.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3514,8 +3593,9 @@ def inak_sprzet_corr():
 def inak_sprzet_inf_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt informatyczny w branżach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_inf.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3531,8 +3611,9 @@ def inak_sprzet_inf_corr():
 def inak_sprzet_tele_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt telekomunikacyjny w branżach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_tele.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3548,8 +3629,9 @@ def inak_sprzet_tele_corr():
 def inak_oprog_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na oprogramowanie w branżach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_oprog.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3578,8 +3660,9 @@ def icorr_wartosc_nakladow_section():
 def iwnak_leasing_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na leasing urządzeń ICT w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_leasing.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3595,8 +3678,9 @@ def iwnak_leasing_corr():
 def iwnak_sprzet_opr_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt i oprogramowanie w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_opr.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3612,8 +3696,9 @@ def iwnak_sprzet_opr_corr():
 def iwnak_sprzet_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt ogółem w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_o.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3629,8 +3714,9 @@ def iwnak_sprzet_corr():
 def iwnak_sprzet_inf_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt informatyczny w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_inf.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3646,8 +3732,9 @@ def iwnak_sprzet_inf_corr():
 def iwnak_sprzet_tele_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt telekomunikacyjny w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_tele.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3663,8 +3750,9 @@ def iwnak_sprzet_tele_corr():
 def iwnak_oprog_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na oprogramowanie w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_oprog.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3694,8 +3782,9 @@ def icorr_pracownicy_section():
 def iprzed_o_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_o.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3711,8 +3800,9 @@ def iprzed_o_corr():
 def iprzed_di_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_di.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3728,8 +3818,9 @@ def iprzed_di_corr():
 def ipr_o_corr():
     st.markdown('### Korelacje - ilość pracujących ogółem w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_o.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3745,8 +3836,9 @@ def ipr_o_corr():
 def ipr_ww_corr():
     st.markdown('### Korelacje - ilość pracowników z wyższym wykształceniem w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_ww.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3762,8 +3854,9 @@ def ipr_ww_corr():
 def ipr_di_corr():
     st.markdown('### Korelacje - ilość pracowników z dostępem do internetu w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_di.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3779,8 +3872,9 @@ def ipr_di_corr():
 def ipr_up_corr():
     st.markdown('### Korelacje - ilość pracowników dysponujących urządzeniami przenośnymi w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_up.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3805,8 +3899,9 @@ def icorr_rodzaje_polaczen_section():
 def irodz_pol_szer_corr():
     st.markdown('### Korelacje - przedsiębiorstwa z dostępem do internetu poprzez łącze szerokopasmowe w branżach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_o.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3822,8 +3917,9 @@ def irodz_pol_szer_corr():
 def irodz_pol_szerDSL_corr():
     st.markdown('### Korelacje - przedsiębiorstwa z dostępem do internetu poprzez łącze szerokopasmowe wykorzystywane z użyciem technologii DSL w branżach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_DSL.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3848,8 +3944,9 @@ def icorr_predkosc_polaczen_section():
 def ipred_pol_szer_w_corr():
     st.markdown('### Korelacje - prędkość połączenia mniej niż 100 Mbit/s w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_w.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3865,8 +3962,9 @@ def ipred_pol_szer_w_corr():
 def ipred_pol_szer_s_corr():
     st.markdown('### Korelacje - prędkość połączenia przynajmniej 100 Mbit/s w przedsiębiorstwach związanych z mediami')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_s.xlsx')
     informacje=df[df["wyszczegolnienie"].isin(['Informacja i komunikacja','Prasa, radio i telewizja, wytwórnie filmowe i fonograficzne','Informatyka i usługi informacyjne'])]
     vector_informacje = informacje["wyszczegolnienie"].tolist()
     df_transformed_infor = informacje.set_index("wyszczegolnienie").T
@@ -3911,8 +4009,9 @@ def tcorr_naklady_section():
 def tnak_leasing_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na leasing urządzeń ICT w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_leasing.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_leasing.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -3928,8 +4027,9 @@ def tnak_leasing_corr():
 def tnak_sprzet_opr_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt i oprogramowanie w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_opr.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_opr.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -3945,8 +4045,9 @@ def tnak_sprzet_opr_corr():
 def tnak_sprzet_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_o.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_o.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -3962,8 +4063,10 @@ def tnak_sprzet_corr():
 def tnak_sprzet_inf_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt informatyczny w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_inf.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_inf.xlsx')
+    
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -3979,8 +4082,9 @@ def tnak_sprzet_inf_corr():
 def tnak_sprzet_tele_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na sprzęt telekomunikacyjny w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_sprzet_tele.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_sprzet_tele.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -3996,8 +4100,9 @@ def tnak_sprzet_tele_corr():
 def tnak_oprog_corr():
     st.markdown('### Korelacje - przedsiębiorstwa, które poniosły nakłady na oprogramowanie w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_N_oprog.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_N_oprog.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4026,8 +4131,9 @@ def tcorr_wartosc_nakladow_section():
 def twnak_leasing_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na leasing urządzeń ICT w przedsiębiorstwach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_leasing.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_leasing.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4043,8 +4149,10 @@ def twnak_leasing_corr():
 def twnak_sprzet_opr_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt i oprogramowanie w przedsiębiorstwach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_opr.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_opr.xlsx')
+    
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4060,8 +4168,9 @@ def twnak_sprzet_opr_corr():
 def twnak_sprzet_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt ogółem w przedsiębiorstwach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_o.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4077,8 +4186,10 @@ def twnak_sprzet_corr():
 def twnak_sprzet_inf_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt informatyczny w przedsiębiorstwach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_inf.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_inf.xlsx')
+    
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4094,8 +4205,9 @@ def twnak_sprzet_inf_corr():
 def twnak_sprzet_tele_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na sprzęt telekomunikacyjny w przedsiębiorstwach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_sprzet_tele.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_sprzet_tele.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4111,8 +4223,9 @@ def twnak_sprzet_tele_corr():
 def twnak_oprog_corr():
     st.markdown('### Korelacje - wartość nakładów poniesionych na oprogramowanie w przedsiębiorstwach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_WN_oprog.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_WN_oprog.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4141,8 +4254,9 @@ def tcorr_pracownicy_section():
 def tprzed_o_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_o.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_o.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4158,8 +4272,9 @@ def tprzed_o_corr():
 def tprzed_di_corr():
     st.markdown('### Korelacje - ilość przedsiębiorstw z dostępem do internetu w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_przed_di.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_przed_di.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4175,8 +4290,9 @@ def tprzed_di_corr():
 def tpr_o_corr():
     st.markdown('### Korelacje - ilość pracujących ogółem w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_o.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_o.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4192,8 +4308,9 @@ def tpr_o_corr():
 def tpr_ww_corr():
     st.markdown('### Korelacje - ilość pracowników z wykształceniem wyższym w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_ww.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_ww.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4209,8 +4326,9 @@ def tpr_ww_corr():
 def tpr_di_corr():
     st.markdown('### Korelacje - ilość pracowników z dostępem do internetu w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_di.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_di.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4226,8 +4344,9 @@ def tpr_di_corr():
 def tpr_up_corr():
     st.markdown('### Korelacje - ilość pracowników dysponujących urządzeniami przenośnymi w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_P_pr_up.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_P_pr_up.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4252,8 +4371,9 @@ def tcorr_rodzaje_polaczen_section():
 def trodz_pol_szer_corr():
     st.markdown('### Korelacje - przedsiębiorstwa z dostępem do internetu poprzez łącze szerokopasmowe w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_o.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_o.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4269,8 +4389,9 @@ def trodz_pol_szer_corr():
 def trodz_pol_szerDSL_corr():
     st.markdown('### Korelacje - przedsiębiorstwa z dostępem do internetu poprzez łącze szerokopasmowe wykorzystywane z użyciem technologii DSL w branżach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_RP_od_szer_DSL.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_RP_od_szer_DSL.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4295,8 +4416,9 @@ def tcorr_predkosc_polaczen_section():
 def tpred_pol_szer_w_corr():
     st.markdown('### Korelacje - prędkość połączenia mniej niż 100 Mbit/s w przedsiębiorstwach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx" 
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_w.xlsx" 
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_w.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4312,8 +4434,9 @@ def tpred_pol_szer_w_corr():
 def tpred_pol_szer_s_corr():
     st.markdown('### Korelacje - prędkość połączenia przynajmniej 100 Mbit/s w przedsiębiorstwach związanych z technologiami informacyjno-komunikacyjnymi')
     
-    plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx"  
-    df = pd.read_excel(plik_wejsciowy)
+    # plik_wejsciowy =  "C:/Users/Dell/Desktop/streamlit/DATAFRAME/datadzialy_wide_PP_od_szer_s.xlsx"  
+    # df = pd.read_excel(plik_wejsciowy)
+    df = pd.read_excel('datadzialy_wide_PP_od_szer_s.xlsx')
     technologie=df[df["wyszczegolnienie"].isin(['Informatyka i usługi informacyjne', 'Produkcja komputerów, wyrobów elektronicznych i optycznych','Działalność związana z oprogramowaniem', 'Działalność związana z doradztwem w zakresie informatyki','Telekomunikacja', 'Informatyka i usługi informacyjne','Sprzedaż hurtowa narzędzi technologii informacyjnej i komunikacyjnej','Handel detaliczny','Badania naukowe i prace rozwojowe','Naprawa i konserwacja komputerów i sprzętu komunikacyjnego','Działalność związana z zarządzaniem urządzeniami informatycznymi'])]
     vector_technologie = technologie["wyszczegolnienie"].tolist()
     df_transformed_tech = technologie.set_index("wyszczegolnienie").T
@@ -4404,8 +4527,9 @@ def predkosc_polaczen_section():
 def maps_demo2():
     st.markdown('### Odsetek przedsiębiorstw, które poniosły nakłady na sprzęt i oprogramowanie wśród przedsiębiorstw ogółem')
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-nakłady.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -4490,8 +4614,9 @@ def maps_demo3():
     st.title("Odsetek przedsiębiorstw, które poniosły nakłady na sprzęt wśród przedsiębiorstw ogółem")
 
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-nakłady.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -4574,8 +4699,9 @@ def maps_demo4():
     st.title("Odsetek przedsiębiorstw, które poniosły nakłady na sprzęt informatyczny wśród przedsiębiorstw ogółem")
 
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-nakłady.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -4658,8 +4784,9 @@ def maps_demo5():
     st.title("Odsetek przedsiębiorstw, które poniosły nakłady na sprzęt telekomunikacyjny wśród przedsiębiorstw ogółem")
 
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-nakłady.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -4742,8 +4869,9 @@ def maps_demo6():
     st.title("Odsetek przedsiębiorstw, które poniosły nakłady na leasing urządzeń ICT wśród przedsiębiorstw ogółem")
 
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-nakłady.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -4826,8 +4954,9 @@ def maps_demo7():
     st.title("Odsetek przedsiębiorstw, które poniosły nakłady na oprogramowanie wśród przedsiębiorstw ogółem")
 
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-nakłady.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-nakłady.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -4909,8 +5038,9 @@ def maps_demo7():
 def maps_demo_pracownicy():
     st.title("Przedsiębiorstwa zatrudniające pracowników według województw")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-pracownicy.xlsx')
         pracownicy = pd.DataFrame(data1)
         wojewodztwa_pracownicy = pracownicy.iloc[47:63]
         wojewodztwa_pracownicy['wyszczegolnienie'] = wojewodztwa_pracownicy['wyszczegolnienie'].str.lower()
@@ -5004,8 +5134,9 @@ def maps_demo_pracownicy():
 def maps_demo2_pracownicy():
     st.title("Odsetek przedsiębiorstw z dostępem do internetu")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-pracownicy.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -5104,8 +5235,9 @@ def maps_demo2_pracownicy():
 def maps_demo3_pracownicy():
     st.title("Pracujący ogółem według województw")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-pracownicy.xlsx')
         pracownicy = pd.DataFrame(data1)
         wojewodztwa_pracownicy = pracownicy.iloc[47:63]
         wojewodztwa_pracownicy['wyszczegolnienie'] = wojewodztwa_pracownicy['wyszczegolnienie'].str.lower()
@@ -5199,8 +5331,9 @@ def maps_demo3_pracownicy():
 def maps_demo4_pracownicy():
     st.title("Odsetek pracowników z wyższym wykształceniem")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-pracownicy.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -5300,8 +5433,9 @@ def maps_demo4_pracownicy():
 def maps_demo5_pracownicy():
     st.title("Odsetek pracowników z dostępem do internetu")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-pracownicy.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -5401,8 +5535,9 @@ def maps_demo5_pracownicy():
 def maps_demo6_pracownicy():
     st.title("Odsetek pracowników mających do dyspozycji urządzenia przenośne")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-pracownicy.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-pracownicy.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -5500,8 +5635,9 @@ def maps_demo6_pracownicy():
 def maps_demo_wart_nakladow():
     st.title("Wartość nakładów na sprzęt/oprogramowanie w przedsiębiorstwach według województw")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-wartość_nakładów.xlsx')
         wart_nakladow = pd.DataFrame(data1)
         wojewodztwa_wart_nakladow = wart_nakladow.iloc[47:63]
         wojewodztwa_wart_nakladow['wyszczegolnienie'] = wojewodztwa_wart_nakladow['wyszczegolnienie'].str.lower()
@@ -5597,8 +5733,9 @@ def maps_demo_wart_nakladow():
 def maps_demo2_wart_nakladow():
     st.title("Wartość nakładów na sprzęt w przedsiębiorstwach według województw")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-wartość_nakładów.xlsx')
         wart_nakladow = pd.DataFrame(data1)
         wojewodztwa_wart_nakladow = wart_nakladow.iloc[47:63]
         wojewodztwa_wart_nakladow['wyszczegolnienie'] = wojewodztwa_wart_nakladow['wyszczegolnienie'].str.lower()
@@ -5694,8 +5831,9 @@ def maps_demo2_wart_nakladow():
 def maps_demo3_wart_nakladow():
     st.title("Nakłady - sprzęt informatyczny")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-wartość_nakładów.xlsx')
         wart_nakladow = pd.DataFrame(data1)
         wojewodztwa_wart_nakladow = wart_nakladow.iloc[47:63]
         wojewodztwa_wart_nakladow['wyszczegolnienie'] = wojewodztwa_wart_nakladow['wyszczegolnienie'].str.lower()
@@ -5791,8 +5929,9 @@ def maps_demo3_wart_nakladow():
 def maps_demo4_wart_nakladow():
     st.title("Nakłady - sprzęt telekomunikacyjny")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-wartość_nakładów.xlsx')
         wart_nakladow = pd.DataFrame(data1)
         wojewodztwa_wart_nakladow = wart_nakladow.iloc[47:63]
         wojewodztwa_wart_nakladow['wyszczegolnienie'] = wojewodztwa_wart_nakladow['wyszczegolnienie'].str.lower()
@@ -5888,8 +6027,9 @@ def maps_demo4_wart_nakladow():
 def maps_demo5_wart_nakladow():
     st.title("Wartość nakładów - leasing")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-wartość_nakładów.xlsx')
         wart_nakladow = pd.DataFrame(data1)
         wojewodztwa_wart_nakladow = wart_nakladow.iloc[47:63]
         wojewodztwa_wart_nakladow['wyszczegolnienie'] = wojewodztwa_wart_nakladow['wyszczegolnienie'].str.lower()
@@ -5985,8 +6125,9 @@ def maps_demo5_wart_nakladow():
 def maps_demo6_wart_nakladow():
     st.title("Wartość nakładów - oprogramowanie")
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-wartość_nakładów.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-wartość_nakładów.xlsx')
         wart_nakladow = pd.DataFrame(data1)
         wojewodztwa_wart_nakladow = wart_nakladow.iloc[47:63]
         wojewodztwa_wart_nakladow['wyszczegolnienie'] = wojewodztwa_wart_nakladow['wyszczegolnienie'].str.lower()
@@ -6083,8 +6224,9 @@ def maps_demo2_rodz_polaczen():
     st.title("Odsetek przedsiębiorstw, które mają dostęp do szerokopasmowego łącza internetowego")
 
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-rodzaje_połączeń.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-rodzaje_połączeń.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-rodzaje_połączeń.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -6173,8 +6315,9 @@ def maps_demo3_rodz_polaczen():
     st.title("Odsetek przedsiębiorstw, które posiadają szerokopasmowy  dostęp do Internetu poprzez łącze DSL")
 
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-rodzaje_połączeń.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-rodzaje_połączeń.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-rodzaje_połączeń.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -6264,8 +6407,9 @@ def maps_demo4_pred_polaczen():
     st.title("Odsetek przedsiębiorstw, które mają szerokopasmowy  dostęp do Internetu - prędkość połączenia mniej niż 100 Mbit/s")
 
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-prędkość_połączeń.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-prędkość_połączeń.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-prędkość_połączeń.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
@@ -6354,8 +6498,9 @@ def maps_demo5_pred_polaczen():
     st.title("Odsetek przedsiębiorstw, które posiadają szerokopasmowy  dostęp do Internetu - prędkość połączenia przynajmniej 100 Mbit/s")
 
     try:
-        data_file_path = 'C:/Users/Dell/Desktop/merge-P-prędkość_połączeń.xlsx'
-        data1 = pd.read_excel(data_file_path)
+        # data_file_path = 'C:/Users/Dell/Desktop/merge-P-prędkość_połączeń.xlsx'
+        # data1 = pd.read_excel(data_file_path)
+        data1 = pd.read_excel('merge-P-prędkość_połączeń.xlsx')
         naklady = pd.DataFrame(data1)
         wojewodztwa_naklady = naklady.iloc[47:63]
         wojewodztwa_naklady['wyszczegolnienie'] = wojewodztwa_naklady['wyszczegolnienie'].str.lower()
