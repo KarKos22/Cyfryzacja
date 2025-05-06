@@ -5613,7 +5613,7 @@ def maps_demo6_pracownicy():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek pracowników mających do dyspozycji urządzenia przenośne',
+            text='Pracownicy mający do dyspozycji urządzenia przenośne',
             anchor='middle'))
     st.altair_chart(chart, use_container_width=True)
     
@@ -6292,7 +6292,7 @@ def maps_demo2_rodz_polaczen():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek przedsiębiorstw, które mają dostęp do szerokopasmowego łącza internetowego',
+            text='Przedsiębiorstwa, które mają dostęp do szerokopasmowego łącza internetowego',
             anchor='middle',fontSize=12))
     st.altair_chart(chart, use_container_width=True)
     
@@ -6384,7 +6384,7 @@ def maps_demo3_rodz_polaczen():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek przedsiębiorstw, które posiadają szerokopasmowy  dostęp do Internetu poprzez łącze DSL',
+            text='Przedsiębiorstwa, które posiadają szerokopasmowy  dostęp do Internetu poprzez łącze DSL',
             anchor='middle',fontSize=12))
     st.altair_chart(chart, use_container_width=True)
     
@@ -6475,7 +6475,7 @@ def maps_demo4_pred_polaczen():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek przedsiębiorstw z łączem szerokopasmowym o prędkości <= 100 Mbit/s',
+            text='Przedsiębiorstwa z łączem szerokopasmowym o prędkości <= 100 Mbit/s',
             anchor='middle',fontSize=12))
     st.altair_chart(chart, use_container_width=True)
     
@@ -6566,7 +6566,7 @@ def maps_demo5_pred_polaczen():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek przedsiębiorstw z łączem szerokopasmowym o prędkości >= 100 Mbit/s',
+            text='Przedsiębiorstwa z łączem szerokopasmowym o prędkości >= 100 Mbit/s',
             anchor='middle',fontSize=12))
     st.altair_chart(chart, use_container_width=True)
     
