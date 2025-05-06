@@ -4590,7 +4590,7 @@ def maps_demo2():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek przedsiębiorstw, które poniosły nakłady na sprzęt i oprogramowanie',
+            text='Przedsiębiorstwa, które poniosły nakłady na sprzęt i oprogramowanie',
             anchor='middle', fontSize=12))    
     
     st.altair_chart(chart, use_container_width=True)
@@ -4676,7 +4676,7 @@ def maps_demo3():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek przedsiębiorstw, które poniosły nakłady na sprzęt',
+            text='Przedsiębiorstwa, które poniosły nakłady na sprzęt',
             anchor='middle', fontSize=12))
     st.altair_chart(chart, use_container_width=True)
     
@@ -4761,7 +4761,7 @@ def maps_demo4():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek przedsiębiorstw, które poniosły nakłady na sprzęt informatyczny',
+            text='Przedsiębiorstwa, które poniosły nakłady na sprzęt informatyczny',
             anchor='middle', fontSize=12))
     st.altair_chart(chart, use_container_width=True)
     
@@ -4846,7 +4846,7 @@ def maps_demo5():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek przedsiębiorstw, które poniosły nakłady na sprzęt telekomunikacyjny',
+            text='Przedsiębiorstwa, które poniosły nakłady na sprzęt telekomunikacyjny',
             anchor='middle', fontSize=12))
     st.altair_chart(chart, use_container_width=True)
     
@@ -4931,7 +4931,7 @@ def maps_demo6():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek przedsiębiorstw, które poniosły nakłady na leasing urządzeń ICT',
+            text='Przedsiębiorstwa, które poniosły nakłady na leasing urządzeń ICT',
             anchor='middle', fontSize=12))
     st.altair_chart(chart, use_container_width=True)
     
@@ -5016,7 +5016,7 @@ def maps_demo7():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek przedsiębiorstw, które poniosły nakłady na oprogramowanie',
+            text='Przedsiębiorstwa, które poniosły nakłady na oprogramowanie',
             anchor='middle', fontSize=12))
     st.altair_chart(chart, use_container_width=True)
     
@@ -5411,7 +5411,7 @@ def maps_demo4_pracownicy():
         color=alt.Color('Region:N', title='Województwo')
     ).properties(
         title=alt.TitleParams(
-            text='Odsetek pracowników z wyższym wykształceniem',
+            text='Pracownicy z wyższym wykształceniem',
             anchor='middle'))
     st.altair_chart(chart, use_container_width=True)
     
